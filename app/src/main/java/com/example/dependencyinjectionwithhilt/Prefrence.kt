@@ -1,6 +1,7 @@
 package com.example.dependencyinjectionwithhilt
 
 import android.util.Log
+import com.google.gson.Gson
 import dagger.hilt.android.scopes.ActivityScoped
 import dagger.hilt.android.scopes.FragmentScoped
 import dagger.hilt.android.scopes.ServiceScoped
@@ -10,7 +11,7 @@ import javax.inject.Singleton
 @Singleton
 class Prefrence
 @Inject constructor(
-    private val prefrence2: Prefrence2
+    private val prefrence2: InterfaceSomething,var gson: Gson
 ) {
     val TAG = "MainActivity"
     fun saveData(data: String): Boolean {
@@ -19,6 +20,8 @@ class Prefrence
     }
     fun doProcessing()
     {
-        prefrence2.doSomeOperation()
+        var str=prefrence2.doSomething()
+        Log.e(TAG,str);
     }
 }
+
