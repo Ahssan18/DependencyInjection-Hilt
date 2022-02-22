@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         prefrence.saveData("ahssan akhtar")
         prefrence.doProcessing()
+        prefrence.doGreat()
     }
 }
 

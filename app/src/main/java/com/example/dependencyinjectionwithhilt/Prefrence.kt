@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @Singleton
 class Prefrence
 @Inject constructor(
-    private val prefrence2: InterfaceSomething,var gson: Gson
+    private val prefrence2: Prefrence2,var gson: Gson
 ) {
     val TAG = "MainActivity"
     fun saveData(data: String): Boolean {
@@ -22,6 +22,10 @@ class Prefrence
     {
         var str=prefrence2.doSomething()
         Log.e(TAG,str);
+    }
+    fun doGreat()
+    {
+      prefrence2.doSomeOperation()
     }
 }
 
